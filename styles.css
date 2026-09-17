@@ -153,6 +153,48 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 5vw; }
 .proj-src a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
 .proj-src a:hover { color: var(--ink); }
 
+/* 产品截图 */
+.shots { margin-top: 18px; }
+.shots-head {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  color: var(--ink-faint);
+  margin-bottom: 10px;
+}
+.shots-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.shot {
+  flex: 0 0 auto;
+  width: 300px;
+  margin: 0;
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--bg);
+}
+.shot figcaption {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: var(--ink-faint);
+  margin-top: 6px;
+}
+.shot figcaption::before {
+  content: "▸ ";
+  color: var(--accent);
+}
+
 /* 状态徽标 */
 .status {
   font-family: var(--mono);
@@ -304,5 +346,6 @@ main { max-width: 1000px; margin: 0 auto; padding: 0 5vw; }
   .overview th:nth-child(3), .overview td:nth-child(3) { display: none; }
   .proj-card { padding: 20px 18px; }
   .skill-group, .judgment-item, .eval-item { grid-template-columns: 1fr; gap: 4px; }
+  .shot { width: 240px; }
   .hero-title { font-size: clamp(1.6rem, 7vw, 2.2rem); }
 }
