@@ -1,0 +1,45 @@
+:root {
+  --bg: #faf8f5; --bg-card: #ffffff;
+  --ink: #1c1917; --ink-muted: #57534e;
+  --accent: #b45309; --accent-soft: #fef3c7;
+  --border: #e7e5e4; --radius: 12px; --maxw: 880px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+  line-height: 1.7;
+}
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+#hero { padding: 80px 0 48px; }
+.hero-eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .05em; }
+#hero h1 { font-size: clamp(28px, 5vw, 40px); margin: 12px 0; }
+.hero-sub { color: var(--ink-muted); font-size: 18px; max-width: 40em; }
+section { padding: 40px 0; }
+h2 { font-size: 24px; margin-bottom: 16px; }
+footer { border-top: 1px solid var(--border); color: var(--ink-muted); }
+a { color: var(--accent); }
+.case { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 28px; }
+.case-head { display: flex; align-items: center; gap: 12px; }
+.case-head h3 { font-size: 22px; }
+.case-status { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.case-tagline { color: var(--ink-muted); margin: 8px 0 16px; }
+.case-rings { list-style: none; display: grid; gap: 10px; }
+.ring { border-top: 1px solid var(--border); padding-top: 10px; font-size: 15px; }
+.judgment-list { list-style: none; display: grid; gap: 12px; }
+.judgment-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 20px; }
+
+.ring--decision { background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 8px; padding: 12px 14px; border-top: none; }
+.ring--decision strong { color: var(--accent); }
+
+.case-status--live { background: var(--accent); color: #fff; }
+.case-status--proto { background: #e7e5e4; color: #44403c; }
+.case-status--demo { background: var(--accent-soft); color: var(--accent); }
+
+@media (max-width: 640px) {
+  #hero { padding: 56px 0 32px; }
+  #hero h1 { font-size: 26px; }
+  .hero-sub { font-size: 16px; }
+  .case { padding: 20px; }
+  section { padding: 28px 0; }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黄浩云 · AI 产品经理作品集</title>
+  <meta name="description" content="独立把 AI 产品从 0 做到上线的产品人，懂技术边界的 AI 产品。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="hero">
+    <div class="wrap">
+      <p class="hero-eyebrow">AI 产品经理 · 校招</p>
+      <h1>独立把 AI 产品从 0 做到上线的产品人</h1>
+      <p class="hero-sub">懂技术边界的 AI 产品——知道大模型 / Agent / RAG 各能做什么、不能做什么，也真的把它们做出来过。</p>
+    </div>
+  </header>
+  <main>
+    <section id="cases">
+      <div class="wrap">
+        <h2>产品案例</h2>
+
+        <article class="case">
+          <header class="case-head">
+            <h3>鉴来助手</h3>
+            <span class="case-status case-status--live">已上线</span>
+          </header>
+          <p class="case-tagline">「小说 AI 伏笔雷达」——帮网文读者/作者在数百万字里理清人物与伏笔的浏览器扩展。</p>
+          <ol class="case-rings">
+            <li class="ring"><strong>痛点</strong>：网文动辄数百万字，追更久了记不住人物关系；作者写上百章后自己也忘了埋过哪些伏笔。</li>
+            <li class="ring"><strong>用户</strong>：重度网文读者（追更）+ 网文作者（创作）。</li>
+            <li class="ring"><strong>洞察</strong>：长文本的「结构化记忆」是刚需——人脑记不住，但读者/作者随时需要调取。</li>
+            <li class="ring"><strong>方案</strong>：阅读时一键分析章节 → 概况 / 伏笔雷达 / 人物关系图 / 周报 / 批量分析 / 划词查角色。</li>
+            <li class="ring ring--decision"><strong>★ AI 决策点</strong>：① 用大模型抽取而非规则；② 按章节分段而非整书塞入（上下文窗口+成本+时效）；③ 结构化输出图/表而非自由问答；④ 渐进式加载（摘要先出、详情后出、两调用并行）；⑤ 砍掉「AI 生成引流文案」功能（YAGNI 聚焦核心）；⑥ 免登录试用 3 次 + 注册额度。</li>
+            <li class="ring"><strong>验证</strong>：真实上线 jianla.xyz（备案齐全）、多端分发（Chrome/Edge/Greasy Fork/官网直链）、真实用户反馈驱动的 20+ 次迭代。</li>
+            <li class="ring"><strong>复盘</strong>：番茄反爬、AI 内容可信度风险、网络稳定性 → 学会防御性产品设计 + 兜底。</li>
+          </ol>
+        </article>
+
+        <article class="case">
+          <header class="case-head">
+            <h3>AI Interview Agent</h3>
+            <span class="case-status case-status--proto">可运行·原型级</span>
+          </header>
+          <p class="case-tagline">多智能体驱动的 AI 面试练习平台：模拟面试 + 简历分析 + 自动评分 + 报告生成</p>
+          <ol class="case-rings">
+            <li class="ring"><strong>痛点</strong>：求职者缺练习机会、练完缺专业反馈。</li>
+            <li class="ring"><strong>用户</strong>：求职者（尤其 AI / 技术岗）。</li>
+            <li class="ring"><strong>洞察</strong>：面试 = 简历解析 + 提问 + 评估 + 复盘，是天然可拆分的多步骤任务。</li>
+            <li class="ring"><strong>方案</strong>：4 个 Agent 分工：Resume（简历解析）/ Interview（5 阶段提问+自动追问）/ Eval（实时评分）/ Report（报告生成），SharedMemory + MessageBus 共享上下文。</li>
+            <li class="ring ring--decision"><strong>★ AI 决策点</strong>：① 为什么拆 4 个 Agent 而非单 Agent：职责分离、可独立替换；② 为什么 SharedMemory + MessageBus：Agent 间共享上下文、避免割裂；③ 为什么多模型一键切换（DeepSeek/OpenAI/Anthropic/Ollama）：模型无关的产品设计，不绑定单一供应商。</li>
+            <li class="ring"><strong>验证</strong>：可运行（原型级），真实跑通完整面试流程。</li>
+            <li class="ring"><strong>复盘</strong>：单 Agent → 多 Agent 的取舍：可控性提升，复杂度与成本上升。</li>
+          </ol>
+        </article>
+
+        <article class="case">
+          <header class="case-head">
+            <h3>GraphMind</h3>
+            <span class="case-status case-status--demo">可运行·工程化展示</span>
+          </header>
+          <p class="case-tagline">可解释、可评估、可运营的 Graph RAG 知识检索与推理平台</p>
+          <ol class="case-rings">
+            <li class="ring"><strong>痛点</strong>：市面 RAG 产品多是「套壳聊天」——回答不可信、不可评估、不可运营。</li>
+            <li class="ring"><strong>用户</strong>：需要「可信知识检索」的开发者 / 企业（工程化展示项目）。</li>
+            <li class="ring"><strong>洞察</strong>：RAG 不能是黑盒：要能解释（引用来源）、能评估（质量门禁）、能运营（入库状态机 / 队列健康）。</li>
+            <li class="ring"><strong>方案</strong>：三路混合检索（向量 + BM25 + 图谱）+ 引用来源 + Trace 面板 + Golden Eval 质量门禁 + 生产化入库。</li>
+            <li class="ring ring--decision"><strong>★ AI 决策点</strong>：① 为什么三路混合检索：向量管语义、BM25 管精确关键词、图谱管关联，RRF 融合 + Reranker 重排；② 为什么可解释（引用 + Trace）：信任是 RAG 产品的生命线；③ 为什么 Golden Eval 门禁（Recall / MRR / Citation Precision / p95 latency）：质量要有量化红线；④ 为什么生产化入库（状态机 / 重试 / DLQ）：「能跑」和「能上线」的区别。</li>
+            <li class="ring"><strong>验证</strong>：可运行，内置 Demo Pack + 验收命令 + 面试讲稿。</li>
+            <li class="ring"><strong>复盘</strong>：从「做能聊天的 RAG」到「做可信可评估的 RAG」——把工程能力翻译成产品价值。</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+    <section id="ai-judgment">
+      <div class="wrap">
+        <h2>我的 AI 产品判断力</h2>
+        <ul class="judgment-list">
+          <li class="judgment-item"><strong>大模型</strong>：擅长开放生成/理解/抽取，不擅长精确计算与事实保证。</li>
+          <li class="judgment-item"><strong>RAG</strong>：解决「知识私有/新鲜/长文本」，本质是上下文窗口 + 成本的权衡。</li>
+          <li class="judgment-item"><strong>Agent</strong>：适合多步骤任务分解，代价是可控性与成本。</li>
+          <li class="judgment-item"><strong>成本/效果权衡</strong>：模型选型、渐进式加载、额度体系。</li>
+          <li class="judgment-item"><strong>边界与信任</strong>：AI 生成内容存在可信度风险，产品需加免责声明。</li>
+        </ul>
+      </div>
+    </section>
+    <section id="about">
+      <div class="wrap">
+        <h2>关于我</h2>
+        <p>独立完成 3 个 AI 产品：从「已上线的浏览器扩展」到「可运行的工程化 RAG 平台」。擅长把真实用户问题翻译成 AI 方案，并用技术边界判断力避免「为了 AI 而 AI」。</p>
+      </div>
+    </section>
+  </main>
+  <footer id="contact">
+    <div class="wrap">
+      <h2>联系</h2>
+      <p>邮箱 <a href="mailto:2313370765@qq.com">2313370765@qq.com</a> · GitHub <a href="https://github.com/haoyunh415-create">haoyunh415-create</a></p>
+    </div>
+  </footer>
+</body>
+</html>
