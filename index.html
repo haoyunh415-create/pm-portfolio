@@ -1,101 +1,342 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>黄浩云 · AI 产品经理作品集</title>
-  <meta name="description" content="独立把 AI 产品从 0 做到上线的产品人，懂技术边界的 AI 产品。">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="黄浩云 · 人工智能专业本科生 · AI 产品经理求职作品集：鉴来助手（Chrome/Edge 双商店）、AI Interview Agent（Multi-Agent）、GraphMind（GraphRAG）——懂技术边界的 AI 产品人。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="黄浩云 · AI 产品经理作品集 — 独立把 AI 产品从 0 做到上线">
+<meta property="og:description" content="人工智能专业背景 × AI 产品设计 × LLM·RAG·Agent。三个独立开发并上线的 AI 产品，逐项目拆解产品与 AI 决策。">
+<meta name="twitter:card" content="summary">
+<title>黄浩云 · AI 产品经理作品集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header id="hero">
-    <div class="wrap">
-      <p class="hero-eyebrow">AI 产品经理 · 校招</p>
-      <h1>独立把 AI 产品从 0 做到上线的产品人</h1>
-      <p class="hero-sub">懂技术边界的 AI 产品——知道大模型 / Agent / RAG 各能做什么、不能做什么，也真的把它们做出来过。</p>
+
+<header class="site-head">
+  <span class="mono no">黄浩云 / HHY — AI 产品作品集</span>
+  <span class="mono no">AI 产品经理 · 实习 / 校招</span>
+</header>
+
+<main>
+
+  <!-- ① HERO · 求职定位 -->
+  <section class="hero">
+    <p class="mono kicker">AI 产品经理 · 从 0 到 1 · 懂技术边界</p>
+    <h1 class="hero-title">独立把 AI 产品从零做到上线。</h1>
+    <p class="hero-sub">人工智能专业本科生：把 AI 产品设计、LLM · RAG · Agent 技术理解，落到三个独立开发并实际上线的产品里。</p>
+    <div class="hero-meta mono">
+      <span>黄浩云</span><i>·</i><span>岭南师范学院 · 人工智能本科</span><i>·</i><span>2027 届 · AI 产品（实习 / 校招）</span>
     </div>
-  </header>
-  <main>
-    <section id="cases">
-      <div class="wrap">
-        <h2>产品案例</h2>
-
-        <article class="case">
-          <header class="case-head">
-            <h3>鉴来助手</h3>
-            <span class="case-status case-status--live">已上线</span>
-          </header>
-          <p class="case-tagline">「小说 AI 伏笔雷达」——帮网文读者/作者在数百万字里理清人物与伏笔的浏览器扩展。</p>
-          <ol class="case-rings">
-            <li class="ring"><strong>痛点</strong>：网文动辄数百万字，追更久了记不住人物关系；作者写上百章后自己也忘了埋过哪些伏笔。</li>
-            <li class="ring"><strong>用户</strong>：重度网文读者（追更）+ 网文作者（创作）。</li>
-            <li class="ring"><strong>洞察</strong>：长文本的「结构化记忆」是刚需——人脑记不住，但读者/作者随时需要调取。</li>
-            <li class="ring"><strong>方案</strong>：阅读时一键分析章节 → 概况 / 伏笔雷达 / 人物关系图 / 周报 / 批量分析 / 划词查角色。</li>
-            <li class="ring ring--decision"><strong>★ AI 决策点</strong>：① 用大模型抽取而非规则；② 按章节分段而非整书塞入（上下文窗口+成本+时效）；③ 结构化输出图/表而非自由问答；④ 渐进式加载（摘要先出、详情后出、两调用并行）；⑤ 砍掉「AI 生成引流文案」功能（YAGNI 聚焦核心）；⑥ 免登录试用 3 次 + 注册额度。</li>
-            <li class="ring"><strong>验证</strong>：真实上线 jianla.xyz（备案齐全）、多端分发（Chrome/Edge/Greasy Fork/官网直链）、真实用户反馈驱动的 20+ 次迭代。</li>
-            <li class="ring"><strong>复盘</strong>：番茄反爬、AI 内容可信度风险、网络稳定性 → 学会防御性产品设计 + 兜底。</li>
-          </ol>
-        </article>
-
-        <article class="case">
-          <header class="case-head">
-            <h3>AI Interview Agent</h3>
-            <span class="case-status case-status--proto">可运行·原型级</span>
-          </header>
-          <p class="case-tagline">多智能体驱动的 AI 面试练习平台：模拟面试 + 简历分析 + 自动评分 + 报告生成</p>
-          <ol class="case-rings">
-            <li class="ring"><strong>痛点</strong>：求职者缺练习机会、练完缺专业反馈。</li>
-            <li class="ring"><strong>用户</strong>：求职者（尤其 AI / 技术岗）。</li>
-            <li class="ring"><strong>洞察</strong>：面试 = 简历解析 + 提问 + 评估 + 复盘，是天然可拆分的多步骤任务。</li>
-            <li class="ring"><strong>方案</strong>：4 个 Agent 分工：Resume（简历解析）/ Interview（5 阶段提问+自动追问）/ Eval（实时评分）/ Report（报告生成），SharedMemory + MessageBus 共享上下文。</li>
-            <li class="ring ring--decision"><strong>★ AI 决策点</strong>：① 为什么拆 4 个 Agent 而非单 Agent：职责分离、可独立替换；② 为什么 SharedMemory + MessageBus：Agent 间共享上下文、避免割裂；③ 为什么多模型一键切换（DeepSeek/OpenAI/Anthropic/Ollama）：模型无关的产品设计，不绑定单一供应商。</li>
-            <li class="ring"><strong>验证</strong>：可运行（原型级），真实跑通完整面试流程。</li>
-            <li class="ring"><strong>复盘</strong>：单 Agent → 多 Agent 的取舍：可控性提升，复杂度与成本上升。</li>
-          </ol>
-        </article>
-
-        <article class="case">
-          <header class="case-head">
-            <h3>GraphMind</h3>
-            <span class="case-status case-status--demo">可运行·工程化展示</span>
-          </header>
-          <p class="case-tagline">可解释、可评估、可运营的 Graph RAG 知识检索与推理平台</p>
-          <ol class="case-rings">
-            <li class="ring"><strong>痛点</strong>：市面 RAG 产品多是「套壳聊天」——回答不可信、不可评估、不可运营。</li>
-            <li class="ring"><strong>用户</strong>：需要「可信知识检索」的开发者 / 企业（工程化展示项目）。</li>
-            <li class="ring"><strong>洞察</strong>：RAG 不能是黑盒：要能解释（引用来源）、能评估（质量门禁）、能运营（入库状态机 / 队列健康）。</li>
-            <li class="ring"><strong>方案</strong>：三路混合检索（向量 + BM25 + 图谱）+ 引用来源 + Trace 面板 + Golden Eval 质量门禁 + 生产化入库。</li>
-            <li class="ring ring--decision"><strong>★ AI 决策点</strong>：① 为什么三路混合检索：向量管语义、BM25 管精确关键词、图谱管关联，RRF 融合 + Reranker 重排；② 为什么可解释（引用 + Trace）：信任是 RAG 产品的生命线；③ 为什么 Golden Eval 门禁（Recall / MRR / Citation Precision / p95 latency）：质量要有量化红线；④ 为什么生产化入库（状态机 / 重试 / DLQ）：「能跑」和「能上线」的区别。</li>
-            <li class="ring"><strong>验证</strong>：可运行，内置 Demo Pack + 验收命令 + 面试讲稿。</li>
-            <li class="ring"><strong>复盘</strong>：从「做能聊天的 RAG」到「做可信可评估的 RAG」——把工程能力翻译成产品价值。</li>
-          </ol>
-        </article>
-      </div>
-    </section>
-    <section id="ai-judgment">
-      <div class="wrap">
-        <h2>我的 AI 产品判断力</h2>
-        <ul class="judgment-list">
-          <li class="judgment-item"><strong>大模型</strong>：擅长开放生成/理解/抽取，不擅长精确计算与事实保证。</li>
-          <li class="judgment-item"><strong>RAG</strong>：解决「知识私有/新鲜/长文本」，本质是上下文窗口 + 成本的权衡。</li>
-          <li class="judgment-item"><strong>Agent</strong>：适合多步骤任务分解，代价是可控性与成本。</li>
-          <li class="judgment-item"><strong>成本/效果权衡</strong>：模型选型、渐进式加载、额度体系。</li>
-          <li class="judgment-item"><strong>边界与信任</strong>：AI 生成内容存在可信度风险，产品需加免责声明。</li>
-        </ul>
-      </div>
-    </section>
-    <section id="about">
-      <div class="wrap">
-        <h2>关于我</h2>
-        <p>独立完成 3 个 AI 产品：从「已上线的浏览器扩展」到「可运行的工程化 RAG 平台」。擅长把真实用户问题翻译成 AI 方案，并用技术边界判断力避免「为了 AI 而 AI」。</p>
-      </div>
-    </section>
-  </main>
-  <footer id="contact">
-    <div class="wrap">
-      <h2>联系</h2>
-      <p>邮箱 <a href="mailto:2313370765@qq.com">2313370765@qq.com</a> · GitHub <a href="https://github.com/haoyunh415-create">haoyunh415-create</a></p>
+    <div class="hero-chips mono">
+      <span class="chip">3 个 AI 产品</span>
+      <span class="chip">从 0 到上线</span>
+      <span class="chip">懂技术边界</span>
     </div>
-  </footer>
+  </section>
+
+  <!-- ② 项目速览 -->
+  <section class="block" id="overview">
+    <div class="block-head">
+      <span class="mono no">01 — 速览</span>
+      <h2 class="block-title">项目一览</h2>
+    </div>
+    <table class="overview">
+      <thead>
+        <tr><th>项目</th><th>一句话</th><th>源码</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">鉴来助手 <span class="status status-live">已上线</span></td>
+          <td class="desc">已上线 Chrome/Edge 双商店的 AI 浏览器扩展，用「结构化记忆」解决长篇阅读的记忆断层</td>
+          <td><a href="https://github.com/haoyunh415-create/novel-copilot-backend">GitHub ↗</a></td>
+        </tr>
+        <tr>
+          <td class="name">AI Interview Agent <span class="status status-demo">可运行 · 原型级</span></td>
+          <td class="desc">Multi-Agent 面试训练，简历解析 → 追问 → 评分 → 报告全流程</td>
+          <td><a href="https://github.com/haoyunh415-create/AI-Interview-Agent">GitHub ↗</a></td>
+        </tr>
+        <tr>
+          <td class="name">GraphMind <span class="status status-demo">可运行 · 工程化展示</span></td>
+          <td class="desc">GraphRAG 知识平台，混合检索 + 可解释 + 可评估</td>
+          <td><a href="https://github.com/haoyunh415-create/rag-GraphMind">GitHub ↗</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ③ 项目详解 -->
+  <section class="block" id="projects">
+    <div class="block-head">
+      <span class="mono no">02 — 详解</span>
+      <h2 class="block-title">项目详解</h2>
+    </div>
+
+    <!-- 鉴来助手 -->
+    <article class="proj-card">
+      <div class="proj-card-head">
+        <span class="proj-num">01</span>
+        <h3 class="proj-name">鉴来助手 <span class="mono sub">小说 AI 伏笔雷达</span></h3>
+      </div>
+      <p class="proj-oneliner">已上线 Chrome + Edge 双商店的浏览器扩展，帮网文读者与作者在数百万字里理清人物与伏笔。</p>
+      <p class="proj-role mono">角色 · <em>独立完成</em></p>
+
+      <div class="proj-sec">
+        <h4>背景 · 用户问题</h4>
+        <p>网文动辄数百万字，读者追更数月后，早期伏笔与人物关系在记忆中早已断裂；作者写到上百章也容易忘掉自己埋过的伏笔。三个具体痛点：<strong>人物关系复杂、前文遗忘、伏笔难追踪</strong>——本质都是长文本上下文人脑记不住。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>用户与场景</h4>
+        <p>重度网文读者（追更数月）+ 网文作者（创作连载）。场景都在「读 / 写长文本时随时需要调取记忆」，而翻找原文的成本极高。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>产品目标</h4>
+        <p>在数百万字里，让读者与作者「一秒回忆起」人物是谁、伏笔埋在哪——把「人脑记不住」这件事交给产品解决。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>核心方案 · 结构化记忆</h4>
+        <p>不是把整本书塞给模型，而是分层压缩成可检索的结构化记忆，逐层解决<strong>长文本上下文有限、成本高、信息丢失</strong>三个问题：</p>
+        <div class="flow">
+          <span class="flow-step">章节结构化摘要</span><span class="flow-arrow">→</span><span class="flow-step">阶段汇总</span><span class="flow-arrow">→</span><span class="flow-step">全局记忆</span>
+        </div>
+        <p>伏笔雷达在此基础上做跨章呼应识别；需要原文时按需回看，规避检索漂移。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>AI 能力设计</h4>
+        <p>用大模型做语义抽取与结构化（而非规则）：人物、关系、伏笔、事件各落结构化字段；结构化输出图 / 表让结果可读、可核对；渐进式加载（摘要先出、详情后出、两调用并行）压低等待与成本。</p>
+      </div>
+      <div class="proj-sec decision">
+        <h4>★ AI 决策点</h4>
+        <ol class="decision-list">
+          <li><strong>为什么用 LLM 而不是规则</strong>：长文本语义难以用规则覆盖；但 LLM 的事实保证弱，所以用结构化输出 + 可回原文核对来兜底。</li>
+          <li><strong>为什么不能整书塞给模型</strong>：上下文窗口有限 + 成本高 + 早章信息会丢，分层摘要是用成本换完整性。</li>
+          <li><strong>上下文 · 成本 · 完整性的权衡</strong>：分层摘要 + 按需回看原文，而非一次性全量 RAG。</li>
+          <li><strong>哪些功能值得 AI</strong>：记忆与伏笔识别值得；「AI 生成引流文案」这类可替代的功能砍掉（YAGNI），聚焦核心价值。</li>
+          <li><strong>可信度兜底</strong>：AI 生成内容存在可信度风险 → 产品加免责声明，关键结论可回原文核对。</li>
+        </ol>
+      </div>
+      <div class="proj-sec">
+        <h4>验证 · 上线</h4>
+        <p>真实上线 <strong>jianla.xyz</strong>（ICP 备案 + 公安备案）；Chrome / Edge 双商店上架（权限收窄过审）；多渠道分发（Chrome / Edge / 免梯 zip / Greasy Fork / 官网直链）；真实用户反馈驱动的 <strong>20+ 次迭代</strong>。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>迭代与复盘</h4>
+        <p>番茄反爬 → 加防御性重试与兜底；AI 内容可信度风险 → 加免责声明；网络不稳定 → 状态可恢复。学会的是「上线 → 反馈 → 调整」的闭环，而不是一次做完。</p>
+      </div>
+
+      <div class="proj-tags"><span>浏览器扩展</span><span>结构化记忆</span><span>渐进式摘要</span><span>权限控制</span><span>SSE</span><span>多端分发</span></div>
+      <div class="proj-src"><a href="https://github.com/haoyunh415-create/novel-copilot-backend">查看源码 ↗</a></div>
+    </article>
+
+    <!-- AI Interview Agent -->
+    <article class="proj-card">
+      <div class="proj-card-head">
+        <span class="proj-num">02</span>
+        <h3 class="proj-name">AI Interview Agent <span class="mono sub">Multi-Agent 面试训练平台</span></h3>
+      </div>
+      <p class="proj-oneliner">多智能体协同的面试训练系统：简历解析、模拟面试、自动评分、报告生成全流程自动化。</p>
+      <p class="proj-role mono">角色 · <em>独立完成</em></p>
+
+      <div class="proj-sec">
+        <h4>背景 · 用户问题</h4>
+        <p>求职者缺练习机会，练完更缺专业反馈——没人告诉他哪句答得不好、下一步该追问什么。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>用户与场景</h4>
+        <p>求职者（尤其 AI / 技术岗），在正式面试前需要低成本的模拟与复盘。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>产品目标</h4>
+        <p>把面试拆成可自动化的流程，让用户走完一遍完整闭环：</p>
+        <div class="flow">
+          <span class="flow-step">简历上传</span><span class="flow-arrow">→</span><span class="flow-step">模拟面试</span><span class="flow-arrow">→</span><span class="flow-step">动态追问</span><span class="flow-arrow">→</span><span class="flow-step">AI 评价</span><span class="flow-arrow">→</span><span class="flow-step">面试报告</span>
+        </div>
+      </div>
+      <div class="proj-sec">
+        <h4>核心方案</h4>
+        <p>4 个 Agent 分工：<strong>Resume</strong> 解析简历、<strong>Interview</strong> 按 5 阶段提问并自动追问、<strong>Eval</strong> 实时评分、<strong>Report</strong> 生成报告。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>AI 能力设计 · 为什么需要 Agent</h4>
+        <p>面试是天然多步骤任务，单 Agent 一次做完会顾此失彼。拆成 4 个 Agent 各司其职：<strong>State</strong> 存当前进度与候选人画像，<strong>Memory</strong>（SharedMemory + MessageBus）让各 Agent 共享上下文不割裂；追问有次数上限、评分有结构化规则，避免 Agent 无限循环或凭空打分。</p>
+      </div>
+      <div class="proj-sec decision">
+        <h4>★ AI 决策点</h4>
+        <ol class="decision-list">
+          <li><strong>为什么拆 4 个 Agent 而非单 Agent</strong>：职责分离、可独立替换，可控性更强。</li>
+          <li><strong>State 存什么 / Memory 解决什么</strong>：State 存进度与画像，Memory 解决跨 Agent 的上下文割裂。</li>
+          <li><strong>追问怎么控制</strong>：设追问次数上限 + 终止条件，避免无限循环烧成本。</li>
+          <li><strong>评分怎么可信</strong>：结构化评分维度，而非一句「不错」。</li>
+          <li><strong>多模型一键切换</strong>（DeepSeek / OpenAI / Anthropic / Ollama）：模型无关，不绑定单一供应商。</li>
+        </ol>
+      </div>
+      <div class="proj-sec">
+        <h4>验证</h4>
+        <p>可运行（原型级），真实跑通完整面试流程，流式交互返回。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>迭代与复盘</h4>
+        <p>单 Agent → 多 Agent 的取舍：可控性与可维护性提升，但复杂度与成本上升——多 Agent 不是越多越好，够用为止。</p>
+      </div>
+
+      <div class="proj-tags"><span>Multi-Agent</span><span>State &amp; Memory</span><span>SSE</span><span>多模型切换</span><span>FastAPI</span><span>SQLite</span></div>
+      <div class="proj-src"><a href="https://github.com/haoyunh415-create/AI-Interview-Agent">查看源码 ↗</a></div>
+    </article>
+
+    <!-- GraphMind -->
+    <article class="proj-card">
+      <div class="proj-card-head">
+        <span class="proj-num">03</span>
+        <h3 class="proj-name">GraphMind <span class="mono sub">GraphRAG 知识检索与推理平台</span></h3>
+      </div>
+      <p class="proj-oneliner">可解释、可评估、可运营的 GraphRAG 知识平台。</p>
+      <p class="proj-role mono">角色 · <em>独立完成</em></p>
+
+      <div class="proj-sec">
+        <h4>背景 · 用户问题</h4>
+        <p>市面 RAG 产品多是「套壳聊天」——回答不可信、不可评估、不可运营。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>用户与场景</h4>
+        <p>需要「可信知识检索」的开发者 / 企业（工程化展示项目，用来证明我理解检索与评估）。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>产品目标</h4>
+        <p>让 RAG 不是黑盒：答案能追溯来源，质量有量化红线，入库可运营。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>核心方案 · 三路混合检索</h4>
+        <p>每一步都对应一个检索问题：向量检索懂语义但抓不准精确关键词 → 加 <strong>BM25</strong> 管精确关键词 → 挂<strong>知识图谱</strong>管关联推理 → <strong>RRF 融合 + Reranker</strong> 重排。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>效果评估 · 怎么证明变好了</h4>
+        <div class="eval-grid">
+          <div class="eval-item"><span class="eval-term">Recall 召回</span><span class="eval-desc">能不能找到相关信息</span></div>
+          <div class="eval-item"><span class="eval-term">MRR</span><span class="eval-desc">相关信息是不是排在前面</span></div>
+          <div class="eval-item"><span class="eval-term">Citation Precision</span><span class="eval-desc">引用是否真的支持答案</span></div>
+          <div class="eval-item"><span class="eval-term">p95 latency</span><span class="eval-desc">大多数用户要等多久</span></div>
+        </div>
+        <p>用 <strong>Golden Eval 质量门禁</strong>守住这些量化红线，而不是靠「感觉变好了」。</p>
+      </div>
+      <div class="proj-sec decision">
+        <h4>★ AI 决策点</h4>
+        <ol class="decision-list">
+          <li><strong>为什么混合检索</strong>：单一向量检索有短板，多路互补 + 融合重排。</li>
+          <li><strong>可解释（引用 + Trace）</strong>：信任是 RAG 产品的生命线。</li>
+          <li><strong>质量门禁（Golden Eval）</strong>：质量要有量化红线。</li>
+          <li><strong>生产化入库</strong>（状态机 / 重试 / DLQ）：「能跑」和「能上线」是两回事。</li>
+        </ol>
+      </div>
+      <div class="proj-sec">
+        <h4>验证</h4>
+        <p>可运行（工程化展示），内置 Demo Pack + 验收命令。</p>
+      </div>
+      <div class="proj-sec">
+        <h4>迭代与复盘</h4>
+        <p>从「做能聊天的 RAG」到「做可信可评估的 RAG」——把工程能力翻译成产品价值。</p>
+      </div>
+
+      <div class="proj-tags"><span>GraphRAG</span><span>混合检索</span><span>RRF + Reranker</span><span>引用溯源</span><span>Golden Eval</span><span>Neo4j</span><span>Milvus</span></div>
+      <div class="proj-src"><a href="https://github.com/haoyunh415-create/rag-GraphMind">查看源码 ↗</a></div>
+    </article>
+  </section>
+
+  <!-- ④ 旗舰复盘 -->
+  <section class="block" id="flagship">
+    <div class="block-head">
+      <span class="mono no">03 — 旗舰复盘</span>
+      <h2 class="block-title">鉴来助手 <span class="mono sub">从 0 到双商店的 7 个决策</span></h2>
+    </div>
+    <ol class="timeline">
+      <li class="tl-node">
+        <span class="tl-dot"></span>
+        <div class="tl-head"><span class="tl-index">01</span><span class="tl-title">需求洞察</span><span class="tl-verdict">长篇阅读的记忆断层是真实痛点</span></div>
+        <p>网文连载数百章、追更数月，早期伏笔与人物关系在记忆中早已断裂。</p>
+      </li>
+      <li class="tl-node">
+        <span class="tl-dot"></span>
+        <div class="tl-head"><span class="tl-index">02</span><span class="tl-title">技术方案</span><span class="tl-verdict">分层结构化记忆，而非一次性纯 RAG</span></div>
+        <p>章节结构化摘要 → 阶段汇总 → 全局记忆，分层压缩为可检索的结构化记忆，按需回看原文，规避检索漂移与上下文成本。伏笔雷达在此基础上做跨章呼应识别。</p>
+      </li>
+      <li class="tl-node">
+        <span class="tl-dot"></span>
+        <div class="tl-head"><span class="tl-index">03</span><span class="tl-title">商店过审</span><span class="tl-verdict">权限收窄：从通配符到单域名</span></div>
+        <p>把 <code>host_permissions</code> 从通配符收窄到单域名，逐条填写权限用途。「功能覆盖」与「审核风险」的权衡——收敛权限换取过审与信任。</p>
+      </li>
+      <li class="tl-node">
+        <span class="tl-dot"></span>
+        <div class="tl-head"><span class="tl-index">04</span><span class="tl-title">合规与基建</span><span class="tl-verdict">ICP 备案 + 公安备案 + 自建服务器</span></div>
+        <p>ICP 备案 + 公安备案；阿里云 + SSL + Nginx 反代 + systemd。选自建而非 Serverless：核心推理是长任务，需要更细的资源控制。</p>
+        <p class="note">当前：<code>https://jianla.xyz</code> 在线。</p>
+      </li>
+      <li class="tl-node">
+        <span class="tl-dot"></span>
+        <div class="tl-head"><span class="tl-index">05</span><span class="tl-title">分发渠道</span><span class="tl-verdict">国内用户装不了 Chrome 商店，所以必须绕</span></div>
+        <p>多数国内用户无法访问 Chrome 商店。因此额外提供免梯 zip + 油猴脚本版。渠道是从用户真实约束倒推的必选项。</p>
+      </li>
+      <li class="tl-node">
+        <span class="tl-dot"></span>
+        <div class="tl-head"><span class="tl-index">06</span><span class="tl-title">商业化调研</span><span class="tl-verdict">第一道门槛不是技术，是营业执照</span></div>
+        <p>蓝兔支付已停止新签约；微信商户号要求企业 / 个体户主体。<strong>个人开发者做付费产品的第一道门槛是资质，不是代码。</strong>调研结论，尚未办理。</p>
+      </li>
+      <li class="tl-node">
+        <span class="tl-dot"></span>
+        <div class="tl-head"><span class="tl-index">07</span><span class="tl-title">增长受阻</span><span class="tl-verdict">个位数用户，正在诊断为什么</span></div>
+        <p>产品上线后用户量停留在个位数。正在对目标用户做访谈，定位真实阻力。</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ⑤ AI 产品判断 -->
+  <section class="block" id="judgment">
+    <div class="block-head">
+      <span class="mono no">04 — 判断力</span>
+      <h2 class="block-title">我的 AI 产品判断力</h2>
+    </div>
+    <div class="judgment">
+      <div class="judgment-item"><span class="mono jd-label">大模型</span><p>适合开放生成、理解与抽取；注意它不擅长精确计算与事实保证，关键结论要可核对、可兜底。</p></div>
+      <div class="judgment-item"><span class="mono jd-label">RAG</span><p>适合私有 / 新鲜 / 长文本知识；权衡是上下文窗口、成本与检索漂移，不是简单「接个向量库」。</p></div>
+      <div class="judgment-item"><span class="mono jd-label">Agent</span><p>适合多步骤任务分解；权衡是可控性与成本，Agent 不是越多越好。</p></div>
+      <div class="judgment-item"><span class="mono jd-label">成本 / 效果</span><p>模型选型、渐进式加载、额度体系——成本是产品决策的一部分，不是工程细节。</p></div>
+    </div>
+    <div class="formula">AI 产品设计 ＝ <b>效果 × 成本 × 延迟 × 可控性</b>，四个变量一起权衡，缺一不可。</div>
+  </section>
+
+  <!-- ⑥ 技能 -->
+  <section class="block" id="skills">
+    <div class="block-head">
+      <span class="mono no">05 — 技能</span>
+      <h2 class="block-title">技能</h2>
+    </div>
+    <div class="skills">
+      <div class="skill-group"><span class="mono sk-label">产品能力</span><div class="sk-tags"><span class="tag">需求分析</span><span class="tag">用户场景拆解</span><span class="tag">用户流程设计</span><span class="tag">功能规划</span><span class="tag">MVP 设计</span><span class="tag">产品迭代</span><span class="tag">用户反馈分析</span><span class="tag">产品复盘</span><span class="tag">从 0 到 1 产品落地</span></div></div>
+      <div class="skill-group"><span class="mono sk-label">AI 产品能力</span><div class="sk-tags"><span class="tag">LLM</span><span class="tag">Prompt</span><span class="tag">RAG</span><span class="tag">GraphRAG</span><span class="tag">Agent</span><span class="tag">Multi-Agent</span><span class="tag">Context Management</span><span class="tag">AI 效果评估</span><span class="tag">AI 能力选型</span><span class="tag">AI 产品方案设计</span></div></div>
+      <div class="skill-group"><span class="mono sk-label">技术能力</span><div class="sk-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">FastAPI</span><span class="tag">RESTful API</span><span class="tag">SSE</span><span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">Nginx</span></div></div>
+    </div>
+  </section>
+
+  <!-- ⑦ 联系 -->
+  <section class="block" id="contact">
+    <div class="block-head">
+      <span class="mono no">06 — 联系</span>
+      <h2 class="block-title">期待交流</h2>
+    </div>
+    <div class="contact mono">
+      <a class="link" href="mailto:2313370765@qq.com">2313370765@qq.com</a>
+      <a class="link" href="https://github.com/haoyunh415-create">github.com/haoyunh415-create</a>
+      <a class="link" href="https://jianla.xyz">鉴来助手 官网 ↗</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot mono">
+  <span>© 2026 黄浩云</span>
+  <span>建档于 2026-09-17</span>
+</footer>
+
 </body>
 </html>
